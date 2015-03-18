@@ -7,19 +7,19 @@ hello_the_world:
     defaults: { _controller: KappPlatformBundle:Advert:index }
 
 oc_platform_home:
-    path:      /platform
+    path:      /
     defaults:  { _controller: KappPlatformBundle:Advert:index }
     
 oc_platform_view:
-    path:      /platform/advert/{id}
+    path:      /advert/{id}
     defaults:  { _controller: KappPlatformBundle:Advert:view }
     
 oc_platform_add:
-    path:      /platform/add
+    path:      /add
     defaults:  { _controller: KappPlatformBundle:Advert:add }
 
 oc_platform_view_slug:
-    path:      /platform/{year}/{slug}.{format}
+    path:      /{year}/{slug}.{format}
     defaults:  { _controller: KappPlatformBundle:Advert:viewSlug,format: html }
     requirements:
         year:   \d{4}
