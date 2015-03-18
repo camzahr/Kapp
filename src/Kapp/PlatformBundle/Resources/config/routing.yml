@@ -6,19 +6,35 @@ hello_the_world:
     path:     /hello-world
     defaults: { _controller: KappPlatformBundle:Advert:index }
 
-oc_platform_home:
-    path:      /
-    defaults:  { _controller: KappPlatformBundle:Advert:index }
+kapp_platform_home:
+    path:      /{page}
+    defaults:  { _controller: OCPlatformBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
     
-oc_platform_view:
+kapp_platform_view:
     path:      /advert/{id}
-    defaults:  { _controller: KappPlatformBundle:Advert:view }
+    defaults:  { _controller: OCPlatformBundle:Advert:view }
+    requirements:
+        id: \d+
     
-oc_platform_add:
+kapp_platform_add:
     path:      /add
-    defaults:  { _controller: KappPlatformBundle:Advert:add }
+    defaults:  { _controller: OCPlatformBundle:Advert:add }
 
-oc_platform_view_slug:
+kapp_platform_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: OCPlatformBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+kapp_platform_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: OCPlatformBundle:Advert:delete }
+    requirements:
+        id: \d+
+
+kapp_platform_view_slug:
     path:      /{year}/{slug}.{format}
     defaults:  { _controller: KappPlatformBundle:Advert:viewSlug,format: html }
     requirements:
