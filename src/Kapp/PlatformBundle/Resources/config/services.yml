@@ -1,0 +1,4 @@
+services:
+#    kapp_platform.example:
+#        class: Kapp\PlatformBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,7 @@
+kapp_platform_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: KappPlatformBundle:Default:index }
+
+hello_the_world:
+    path:     /hello-world
+    defaults: { _controller: KappPlatformBundle:Advert:index }
